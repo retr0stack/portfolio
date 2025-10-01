@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>retr0stack — Sasha's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><div class="logo">R0S</div><h1>retr0stack</h1></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home">
+    <div class="section-container home">
+      <div class="hero-inner">
+        <h1 class="hello">
+          Hello World!<br>
+          <span id="typing-name"></span><span id="typing-cursor">|</span>
+        </h1>
+        <p class="sub">Building, breaking, and learning through code.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-cursor" id="cursor-static"></div>
+  <div class="custom-cursor" id="cursor-pointer"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-container fade-in">
+      <h1 class="section-title">About me</h1>
+      <div class="about-grid">
+        <div>
+          <img src="assets/my_photo.png" alt="Sasha" class="about-photo">
+        </div>
+        <div>
+          <div class="about-card">
+            <h3>More about me</h3>
+            <p class="muted">I am a dedicated software engineering student with a passion for solving problems through logic, creativity, and code. I have a strong foundation in mathematics and a natural talent for learning both human and programming languages. <br><br>I am seeking opportunities for an internship in industries where I can apply my professional skills and knowledge.</p>
+          </div>
+          <div class="about-card">
+            <div class="subsection-labels">
+              <button class="active" data-show="skills">Skills</button>
+              <button data-show="education">Education</button>
+              <button data-show="languages">Languages</button>
+            </div>
+
+            <div id="skills" class="subsection active">
+              <h4>Programming Languages</h4>
+              <p>Python</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="100%"></div></div>
+              <p>JavaScript</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="100%"></div></div>
+              <p>C++</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="80%"></div></div>
+              <p>Java</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="60%"></div></div>
+              <p>SQL</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="60%"></div></div>
+            </div>
+
+            <div id="education" class="subsection">
+              <h4>Education</h4>
+              <p style="color: #FFFFFF;">University of Europe for Applied Sciences - BSc. Software Engineering</p> <br>
+              <p>Semester 1 GPA: <strong>89.5/100</strong></p>
+              <p>Semester 2 GPA: <strong>79.8/100</strong></p>
+            </div>
+
+            <div id="languages" class="subsection">
+              <h4>Languages</h4>
+              <p>English</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="100%"></div></div>
+              <p>Russian</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="100%"></div></div>
+              <p>Kazakh</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="100%"></div></div>
+              <p>German</p><div class="progress-bar"><div class="progress-bar-inner" data-percent="40%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-container">
+      <h1 class="section-title">My projects</h1>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-container">
+      <h1 class="section-title">Contact me</h1>
+      <div class="contact-grid fade-in" id="contact-grid">
+        <div class="contact-card" id="contact-card">
+          <h3>Get in touch</h3>
+          <div class="contact-info">
+            <p><strong>Email:</strong> chevychalovalexandr@gmail.com</p>
+            <p><strong>Phone:</strong> +49 0162 2175587</p>
+          </div>
+          <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <button type="submit" class="btn send-btn">Send Message</button>
+              <a class="download-cv" href="#" download="Sasha_CV.pdf">Download CV</a>
+            </div>
+          </form>
+        </div>
+        <div class="contact-card center" id="note-card">
+          <h3>Quick note</h3>
+          <p class="muted">I will respond as soon as possible. Email is the fastest way of getting contact with me.</p>
+          <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/alexandr-chevychalov-2436aa360" target="_blank">LinkedIn</a>
+            <a href="https://github.com/retr0stack" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/alexandroff____?igsh=MWQ4c2o5djg2ZWgxeg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:28px 0;text-align:center;color:var(--text-2)">© <span id="year"></span> retr0stack — Alexandr Chevychalov</footer>
+</main>
+
+<div id="image-modal" style="display:none;">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <img src="" alt="Project screenshot" id="modal-img">
+    <button class="modal-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
